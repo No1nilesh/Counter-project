@@ -2,18 +2,24 @@
 let count = 0
 function clicked() {
 
-    count = count + 1
+    count += 1
 
     document.getElementById("count-el").innerText = count;
 }
 
-function clicked2() {
-    count = count - 1
-    
-    document.getElementById("count-el").innerText = count;
-}
-
-function reset() {
+function save() {
+    let countStr = count + " - " 
+    document.getElementById("save-el").textContent += countStr
+    document.getElementById("count-el").textContent = 0
     count = 0
-    document.getElementById("count-el").innerText = count;
 }
+
+let nam = "Nilesh"
+let greetings = "Welcome"
+
+let welcomeEl = greetings + " " + nam 
+wel = document.getElementById('welcome-el')
+wel.textContent = welcomeEl;
+
+wel.textContent += "👋"
+
